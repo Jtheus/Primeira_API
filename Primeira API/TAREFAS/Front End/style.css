@@ -1,0 +1,229 @@
+/*configuração para as paginas index e formulario*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(138, 0, 138);
+}
+.container{
+    color: white;
+    background-color: black;
+    padding: 12px;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 5%;
+}
+#task-form{
+    display: none;
+}
+
+fieldset{
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+
+}
+
+.voltar{
+    border-top: 1px solid dodgerblue;
+}
+h3{
+    text-indent: 10px;
+    border-bottom: 1px solid dodgerblue;
+}
+p{
+    text-indent: 15px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+legend{
+    padding: 8px;
+    text-align: center;
+}
+
+/*nav index*/
+.navbar{
+    border-bottom: 1px solid dodgerblue;
+}
+/*tabela index*/
+
+@media screen and (max-width: 480px){
+    .content{width: 94%;}
+
+    .table thead{
+        display:none;
+    }
+    .table tbody th{display: flex;
+        flex-direction: column;
+        border-bottom: none;
+    }
+    .table tbody {
+        display: inline;
+        flex-direction: column;
+        border-bottom: none;
+    }
+    .table tbody td{
+        border-bottom: none;
+    }
+    .container{
+        color: white;
+        background-color: black;
+        padding: 15px;
+        border-radius: 15px;
+        width: 90%;
+        margin-top: 5%;
+    }
+}
+table{
+    width: 100%;
+   
+}
+.table-bar th{
+    padding-left: 10px;
+}
+option{
+    background-color:rgba(0, 0, 0, 0.612);
+}
+#filtrar{
+    background-color: rgba(10, 18, 85, 0);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: white;
+    outline: none;
+}
+#filtro-form{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+#btn-filtrar{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 200));
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+#labelFiltro{
+    text-indent: -10px;
+}
+.table-bar td{
+    text-align: right;
+    padding-right: 10px;
+}
+.linhaIcones td{
+    width: 5%;
+    text-align: center;
+}
+.linhaIcones {
+    border-bottom: 1px dotted dodgerblue;
+    color: white;
+}
+
+
+
+
+/*links em geral*/
+a, a:visited, input, #sair{
+    text-decoration: none;
+    color: white;
+}
+#sair{
+    display: flex;
+    justify-content: center;
+}
+a:hover, input:hover, #sair:hover{
+    color: yellowgreen;
+}
+
+/*configurações de inputs do formulario*/
+.inputBox{
+    position: relative;
+    margin: 5px;
+}
+.inputTarefa{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1.5px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: .5s;
+}
+.radio-group{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.alerta {
+    background-color: rgb(124, 176, 188);
+    color: #0d2501;
+    padding: 10px;
+    border: 1px solid rgb(124, 176, 188);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alertaCancelada {
+    background-color: rgb(226, 180, 177);
+    color: #580404;
+    padding: 10px;
+    border: 1px solid rgb(226, 180, 177);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alertaCancelada p, .alerta p{
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/*animação nos inputs de escrita do formulario*/
+.inputTarefa:focus ~ .labelInput,
+.inputTarefa:valid ~ .labelInput{
+    top: -15px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+
+/*estilização dos seletores do formulario*/
+.selectTarefa{
+    color: darkgreen;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    width: 60%;
+    position: absolute;
+    top: 20px;
+}
+
+/*botões do formulario*/
+#adicionar, .adicionar{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 200));
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+#cancelar{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 200));
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40%;
+    margin-left: 16%;
+    margin-bottom: 10px;
+    text-align: center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <title>Front End - API</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset id="field1">
+            <div id="main">
+                <header>
+                    <nav class="navbar navbar-expand-sm">
+                        <table class="table-bar">
+                            <tr>
+                                <th>
+                                    <a href="#" onclick="filtrarTarefa()">tarefas</a>
+                                </th>
+                                <td><a href="#" onclick="btn_mais()"><img src="Imagens/mais.png" alt="adicionar" id="btn-mais"></a></td>
+                            </tr>
+                        </table>
+                    </nav>
+                </header>
+                <table class="table" id="tabela">
+                    <thead>
+                        <tr class="linhaIcones">
+                            <th scope="col">Lista de Tarefas</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Atualizar situação</th>
+                            <th scope="col">Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-task">
+                        
+                    </tbody>
+                </table>
+
+                <form action="#" id="task-form">
+                    <legend><b>Nova Tarefa</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="descricao" id="descricao" class="inputTarefa" required>
+                        <label for="descricao" class="labelInput">Descriçao</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="responsavel" id="responsavel" class="inputTarefa" required>
+                        <label for="responsavel" class="labelInput">Responsável</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <select type="text" name="nivel" id="nivel" class="selectTarefa">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                        </select>
+                        <label for="nivel" class="labelSelect">Nivel</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <select type="text" name="prioridade" id="prioridade" class="selectTarefa">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="prioridade" class="labelSelect">Prioridade</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <select type="text" name="situacao" id="situacao" class="selectTarefa">
+                            <option value="NOVA">Nova</option>
+                            <option value="EM ANDAMENTO">Em andamento</option>
+                            <option value="PENDENTE">Pendente</option>
+                            <option value="RESOLVIDA">Resolvida</option>
+                            <option value="CANCELADA">Cancelar</option>
+                        </select>
+                        <label for="situacao" class="labelSelect">Situação</label>
+                    </div>
+                    <br>
+                    <button type="submit" id="adicionar" value="adicionar"><img src="Imagens/verificar.png" alt="confirmar"></button>
+                    <a href="/" type="button" id="cancelar" value="cancelar" onclick="resetar_formulario()"><img src="Imagens/fechar.png" alt="sair"></a>
+                </form>
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>
